@@ -1,0 +1,265 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+background: linear-gradient(135deg, #1a1a2e, #16213e);
+color: #fff;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}
+
+.container {
+max-width: 1000px;
+width: 100%;
+background: rgba(30, 30, 46, 0.9);
+border-radius: 20px;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+padding: 30px;
+border: 1px solid #4cc9f0;
+}
+
+header {
+text-align: center;
+margin-bottom: 30px;
+padding-bottom: 20px;
+border-bottom: 2px solid #4cc9f0;
+}
+
+header h1 {
+font-family: 'Press Start 2P', cursive;
+font-size: 2.5rem;
+color: #4cc9f0;
+margin-bottom: 10px;
+text-shadow: 0 0 10px rgba(76, 201, 240, 0.7);
+}
+
+header .subtitle {
+font-size: 1.2rem;
+color: #b8c1ec;
+opacity: 0.9;
+}
+
+.game-area {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+margin-bottom: 30px;
+}
+
+.score-board {
+flex: 1;
+min-width: 250px;
+background: rgba(20, 20, 40, 0.8);
+border-radius: 15px;
+padding: 25px;
+display: flex;
+flex-direction: column;
+gap: 25px;
+border: 2px solid #4361ee;
+}
+
+.score-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+background: rgba(67, 97, 238, 0.2);
+border-radius: 10px;
+transition: transform 0.3s;
+}
+
+.score-item:hover {
+transform: translateY(-5px);
+background: rgba(67, 97, 238, 0.4);
+}
+
+.score-label {
+font-size: 1.2rem;
+color: #b8c1ec;
+font-weight: bold;
+}
+
+.score-value {
+font-family: 'Press Start 2P', cursive;
+font-size: 1.8rem;
+color: #f72585;
+text-shadow: 0 0 8px rgba(247, 37, 133, 0.5);
+}
+
+.canvas-container {
+flex: 2;
+min-width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 25px;
+}
+
+#gameCanvas {
+background-color: #0f1525;
+border-radius: 10px;
+border: 4px solid #4361ee;
+box-shadow: 0 0 20px rgba(67, 97, 238, 0.5);
+}
+
+.game-controls {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+width: 100%;
+}
+
+.btn {
+padding: 15px 25px;
+border: none;
+border-radius: 50px;
+font-family: 'Roboto', sans-serif;
+font-size: 1.1rem;
+font-weight: bold;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+transition: all 0.3s;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+transform: translateY(1px);
+}
+
+.btn-start {
+background: linear-gradient(to right, #00b4d8, #0077b6);
+color: white;
+}
+
+.btn-pause {
+background: linear-gradient(to right, #f48c06, #e85d04);
+color: white;
+}
+
+.btn-reset {
+background: linear-gradient(to right, #ef233c, #d90429);
+color: white;
+}
+
+.btn-speed {
+background: linear-gradient(to right, #7209b7, #560bad);
+color: white;
+padding: 12px 20px;
+}
+
+.speed-control {
+display: flex;
+gap: 10px;
+}
+
+.instructions {
+flex: 1;
+min-width: 250px;
+background: rgba(20, 20, 40, 0.8);
+border-radius: 15px;
+padding: 25px;
+border: 2px solid #f72585;
+}
+
+.instructions h3 {
+font-family: 'Press Start 2P', cursive;
+font-size: 1.2rem;
+color: #f72585;
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.instructions ul {
+list-style: none;
+padding-left: 0;
+}
+
+.instructions li {
+margin-bottom: 15px;
+padding-left: 10px;
+border-left: 3px solid #4cc9f0;
+padding: 10px;
+background: rgba(76, 201, 240, 0.1);
+border-radius: 0 10px 10px 0;
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.instructions li i {
+color: #4cc9f0;
+font-size: 1.2rem;
+width: 24px;
+}
+
+.food-sample {
+display: inline-block;
+width: 16px;
+height: 16px;
+background-color: #f72585;
+border-radius: 50%;
+margin: 0 5px;
+box-shadow: 0 0 8px #f72585;
+}
+
+footer {
+text-align: center;
+padding-top: 25px;
+border-top: 1px solid #4361ee;
+color: #b8c1ec;
+font-size: 1rem;
+}
+
+footer i {
+color: #f72585;
+margin: 0 5px;
+}
+
+footer .credit a {
+color: #4cc9f0;
+text-decoration: none;
+font-weight: bold;
+}
+
+footer .credit a:hover {
+text-decoration: underline;
+color: #72efdd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+.game-area {
+flex-direction: column;
+}
+
+.score-board, .canvas-container, .instructions {
+width: 100%;
+}
+
+header h1 {
+font-size: 1.8rem;
+}
+
+#gameCanvas {
+width: 95%;
+height: auto;
+}
+}
